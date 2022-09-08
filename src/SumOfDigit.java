@@ -1,15 +1,15 @@
 import java.util.Scanner;
-
 public class SumOfDigit {
     public static void main(String[] args) {
-        int n,count=0;
-        System.out.println("Enter any Number ");
-        Scanner r=new Scanner(System.in);
-        n=r.nextInt();
-        while(n>0) {
-            n=n/10;
-            count++;
+        int n, r, sum = 0;
+        System.out.println("Enter any Number: ");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        while (n > 0) {
+            r = n % 10;
+            sum = sum + r;
+            n = n / 10;
         }
-        System.out.println("Sum of Digit Number "+count);
+        System.out.println("Sum of Digit " + sum);
     }
 }
